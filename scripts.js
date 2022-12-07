@@ -29,23 +29,22 @@ menuArray.forEach(function(food){
 document.querySelectorAll(".add-button").forEach(addButton => {
     addButton.addEventListener("click", (e) => {
         makeYourOrder(e.target.dataset.id);
+        
+        yourOrderContainerEl.style.display = "block";
+        yourOrderListEl.style.display = "block";
     })
 })
 
 function makeYourOrder(foodId) {
     
-    const yourOrderContainerEl = document.querySelector(".your-order-container")
-    const yourOrderListEl = document.querySelector(".your-order-list")
-    yourOrderContainerEl.style.display = "block";
-    yourOrderListEl.style.display = "block";
-    totalPrice += menuArray[foodId].price
     
+    totalPrice += menuArray[foodId].price
     
     yourOrderListEl.innerHTML += 
     `<div class="your-order">
         <div class="your-food">
             <p>${menuArray[foodId].name}</p>
-            <p class="remove-btn">remove</p>
+            <p class="remove-btn" data-foodid="${foodId}">remove</p>
         </div>
         <div class="your-price">
             <p>${menuArray[foodId].price}</p>
@@ -55,15 +54,15 @@ function makeYourOrder(foodId) {
     
     document.querySelectorAll(".remove-btn").forEach(removeButton => {
         removeButton.addEventListener("click", (e) => {
-            console.log("FOOD ID: " + e.target.getAttribute("class")) //silinecek price'ı alamıyorum bir türlü
-            removeFoodFromOrderList(e.target.parentNode.parentNode, e.target.dataset.foodId)
+            removeFoodFromOrderList(e.target.parentNode.parentNode, e.target.dataset.foodid)
         })
     })
-    
 
+    document.getElementById("complete-order-button").addEventListener("click", () => {
+        console.log("complete button clicked.")
+    })
     renderTotalPrice(totalPrice)
 }
-
 
 function renderTotalPrice(totalPrice) {
     document.querySelector(".total-price").innerHTML = 
@@ -75,6 +74,9 @@ function renderTotalPrice(totalPrice) {
 
 function removeFoodFromOrderList(e, id) {
     totalPrice -= menuArray[id].price;
-//    e.remove()
+    if(totalPrice <= 0){
+        yourOrderContainerEl.style.display = "none";
+    }
+    e.remove()
     renderTotalPrice(totalPrice)
 }

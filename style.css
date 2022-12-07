@@ -116,6 +116,18 @@ button {
     cursor: pointer;
 }
 
+.add-button-container i:hover {
+    color: #757575;
+}
+
+.add-button-container i:focus {
+    color: #757575;
+}
+
+.add-button-container i:active {
+    color: #BBBBBB;
+}
+
 .your-order-container {
     margin: 0;
     display: none;
@@ -152,6 +164,18 @@ button {
     margin-left: 13px;
     cursor: pointer;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.your-food .remove-btn:hover {
+    color: #969191;
+}
+
+.your-food .remove-btn:focus {
+    color: #969191;
+}
+
+.your-food .remove-btn:active {
+    color: #676262;
 }
 
 .your-price p{
