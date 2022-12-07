@@ -29,9 +29,7 @@ menuArray.forEach(function(food){
 document.querySelectorAll(".add-button").forEach(addButton => {
     addButton.addEventListener("click", (e) => {
         makeYourOrder(e.target.dataset.id);
-        
         yourOrderContainerEl.style.display = "block";
-        yourOrderListEl.style.display = "block";
     })
 })
 
