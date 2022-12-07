@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    
+    <title>Restaurant Ordering App</title>
 </head>
 <body>
     <main class="main-container">
@@ -13,6 +18,48 @@
             <h1>Jimmy's Diner</h1>
             <h4>The best burgers and pizzas in town.</h4>
         </header>
+        <section class="menu-section-container">
+
+            <div class="food-section">
+            </div>
+
+            <div class="your-order-container">
+
+                <h4 id="your-order-title">Your order</h4>
+
+                <div class="your-order-list">
+                    
+                </div>
+                
+
+                    <div class="total-price">
+                        
+                        
+                    </div>
+                    
+                    <div class="order-button-container">
+                        <button id="complete-order-button">Complete order</button>
+                    </div>
+                    
+            </div>
+
+            <div class="completed-order-message">
+                <p>Thanks, James! Your order is on its way!</p>
+            </div>
+
+
+        </section>
+
+        <section class="paywall-section">
+            <div class="paywall-container">
+                <h3>Enter Card Details</h3>
+                <input type="text" placeholder="Enter Your Name">
+                <input type="text" placeholder="Enter Card Number">
+                <input type="text" placeholder="Enter CVV">
+                <button>Pay</button>
+            </div>
+        </section>
+        
     </main>
 </body>
 <script src="scripts.js" type="module"></script>
