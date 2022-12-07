@@ -1,0 +1,290 @@
+*{
+    margin-top: 0;
+    font-size: 1rem;
+    font-family: 'Smythe', sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+header {
+    background-image: url("images/hamburger.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff;
+    padding-bottom: 61px;
+    padding-left: 46.07px;
+    padding-top: 46px;
+    text-align: left;
+}
+
+h1, h4 {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2.4375rem;
+    margin-bottom: 19px;
+}
+
+h4 {
+    font-size: 1.40125rem;
+}
+
+p {
+    margin: 0;
+}
+
+button {
+    margin: 0;
+}
+
+.main-container {
+    width: 600px;
+    margin: 0 auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.menu-section-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 45px;
+    margin-left: 46px;
+    margin-right: 46px;
+}
+
+.food-section {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.diner-section-container {
+    display: flex;
+    justify-content: space-between;
+    align-self: stretch;
+    border-bottom: 1px solid #D2D2D2;
+    margin-bottom: 45px;
+}
+
+.food {
+    display: flex;
+    padding-bottom: 51px;
+}
+
+/*.food img {
+    height: 89px;
+    width: 70px;
+    object-fit: contain;
+}*/
+
+.food-image p {
+    height: 89px;
+    width: 70px;
+    object-fit: contain;
+    font-size: 60px;
+}
+
+.food-info {
+    margin-left: 31px;
+}
+
+.food-info .food-name{
+    font-size: 1.75rem;
+    margin-bottom: 8.8px;
+}
+
+
+.food-info .food-ingredient {
+    color: #8B8B8B;
+    margin-bottom: 8px;
+}
+
+.food-info .food-price {
+    font-size: 1.25rem;
+}
+
+.add-button-container {
+    width: 50px;
+    height: 50px;
+    padding-top: 25px;
+}
+
+.add-button-container i{
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.your-order-container {
+    margin: 0;
+    display: none;
+}
+
+.your-order-list {
+    display: none;
+}
+
+#your-order-title {
+    font-size: 1.75rem;
+    text-align: center;
+    margin-bottom: 62px;
+}
+
+.your-order {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 9px;
+}
+
+.your-order p {
+    font-size: 1.75rem;
+}
+
+.your-food {
+    display: flex;
+    align-items: center;
+}
+
+.your-food .remove-btn {
+    color: #BBBBBB;
+    font-size: 0.75rem;
+    margin-left: 13px;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.your-price p{
+    font-size: 1.25rem;
+}
+
+.total-price {
+    border-top: solid 2px #393333;
+    margin-top: 28px;
+    padding-top: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-price p {
+    font-size: 1.75rem;
+}
+
+.total-price #total-price-id {
+    font-size: 1.25rem;
+}
+
+.order-button-container {
+    margin-top: 53px;
+}
+
+#complete-order-button {
+    background-color: #16DB99;
+    border-radius: 3px;
+    border: none;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    color: white;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    margin-bottom: 53px;
+    padding: 18px 180px;
+    width: 100%;
+}
+
+#complete-order-button:hover {
+    background-color: #18ce91;
+}
+
+#complete-order-button:focus {
+    background-color: #18ce91;
+}
+
+#complete-order-button:active {
+    background-color: #15a172;
+}
+
+.completed-order-message {
+    display: none;
+    /*none kalkacak*/
+    background-color: #ECFDF5;
+    color: #065F46;
+    margin-bottom: 238px;
+    padding: 40px 60px 60px;
+    text-align: center;
+    height: 120px;
+    width: 504px;
+}
+
+.completed-order-message p {
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.paywall-container {
+    background-color: white;
+    /*display: flex;*/
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 542px;
+    width: 524px;
+    padding-top: 47.32px;
+    padding-bottom: 37.35px;
+    padding-left: 23.22px;
+    padding-right: 24.87px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 3.89px;
+}
+
+.paywall-container h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    margin-bottom: 46.07px;
+}
+
+.paywall-container input {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #757575;
+    border: 1px #757575 solid;
+    border-radius: 3.89px;
+    margin-bottom: 23.22px;
+    height: 71.3px;
+    padding: 16.58px 26.53px 13.8px;
+}
+
+.paywall-container button {
+    background-color: #16DB99;
+    border: none;
+    border-radius: 3.89px;
+    cursor: pointer;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 23.21px;
+    margin-bottom: 0;
+    padding: 25px 211.6px 25px 210.59px;
+    width: 100%;
+}
+
+.paywall-container button:hover {
+    background-color: #18ce91;
+}
+
+.paywall-container button:focus {
+    background-color: #18ce91;
+}
+
+.paywall-container button:active {
+    background-color: #15a172;
+}
