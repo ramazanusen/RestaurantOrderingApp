@@ -45,7 +45,7 @@ function makeYourOrder(foodId) {
     `<div class="your-order">
         <div class="your-food">
             <p>${menuArray[foodId].name}</p>
-            <p class="remove-btn">remove</p>
+            <p class="remove-btn" data-idFood="${foodId}">remove</p>
         </div>
         <div class="your-price">
             <p>${menuArray[foodId].price}</p>
@@ -55,8 +55,8 @@ function makeYourOrder(foodId) {
     
     document.querySelectorAll(".remove-btn").forEach(removeButton => {
         removeButton.addEventListener("click", (e) => {
-            console.log("FOOD ID: " + e.target.getAttribute("class")) //silinecek price'ı alamıyorum bir türlü
-            removeFoodFromOrderList(e.target.parentNode.parentNode, e.target.dataset.foodId)
+            console.log("FOOD ID: " + e.target.dataset.idFood) //silinecek price'ı alamıyorum bir türlü
+            removeFoodFromOrderList(e.target.parentNode.parentNode, e.target.dataset.idFood)
         })
     })
     
@@ -75,6 +75,9 @@ function renderTotalPrice(totalPrice) {
 
 function removeFoodFromOrderList(e, id) {
     totalPrice -= menuArray[id].price;
-//    e.remove()
+    if(totalPrice <= 0){
+        yourOrderContainerEl.style.display = "none";
+    }
+    e.remove()
     renderTotalPrice(totalPrice)
 }
