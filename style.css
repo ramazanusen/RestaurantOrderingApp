@@ -116,6 +116,18 @@ button {
     cursor: pointer;
 }
 
+.add-button-container .add-button:hover {
+    color: rgb(59, 57, 57);
+}
+
+.add-button-container .add-button:focus {
+    color: rgb(59, 57, 57);
+}
+
+.add-button-container .add-button:active {
+    color: rgb(97, 94, 94);
+}
+
 .your-order-container {
     margin: 0;
     display: none;
@@ -152,6 +164,14 @@ button {
     margin-left: 13px;
     cursor: pointer;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.your-food .remove-btn:hover, :focus {
+    color: #8d8a8a;
+}
+
+.your-food .remove-btn:active {
+    color: #3b3939;
 }
 
 .your-price p{
@@ -202,12 +222,11 @@ button {
 }
 
 #complete-order-button:active {
-    background-color: #15a172;
+    background-color: #138d64;
 }
 
 .completed-order-message {
     display: none;
-    /*none kalkacak*/
     background-color: #ECFDF5;
     color: #065F46;
     margin-bottom: 238px;
@@ -223,9 +242,8 @@ button {
     padding: 0;
 }
 
-.paywall-container {
+.paywall-section {
     background-color: white;
-    /*display: flex;*/
     display: none;
     flex-direction: column;
     position: fixed;
@@ -244,6 +262,10 @@ button {
     border-radius: 3.89px;
 }
 
+.paywall-container {
+    margin: 0;
+}
+
 .paywall-container h3 {
     text-align: center;
     font-size: 1.5rem;
@@ -260,6 +282,15 @@ button {
     margin-bottom: 23.22px;
     height: 71.3px;
     padding: 16.58px 26.53px 13.8px;
+}
+
+.paywall-container form input {
+    width: 100%;
+}
+
+.paywall-container form input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
 }
 
 .paywall-container button {
@@ -287,4 +318,9 @@ button {
 
 .paywall-container button:active {
     background-color: #15a172;
+}
+
+.disabled {
+    pointer-events: none;
+    user-select: none;
 }

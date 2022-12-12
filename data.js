@@ -1,4 +1,3 @@
-
 export const menuArray = [
     {
         name: "Pizza",
@@ -22,8 +21,8 @@ export const menuArray = [
         id: 2
     },
     {
-        name: "Mantı",
-        ingredients: ["kıyma, hamur, yoğurt, sos"],
+        name: "Meat Pasty",
+        ingredients: ["ground meat, yoghurt, sauce"],
         price: 18,
         emoji: "🥟",
         id: 3
